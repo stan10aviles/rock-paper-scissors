@@ -52,3 +52,9 @@ function playRound (playerSelection, computerSelection) {
 console.log(playerSelection);
 console.log(computerSelection);
 console.log(playRound(playerSelection, computerSelection));
+
+function game () {
+    for (let i=0; i < 5; i++) {
+        playRound(playerSelection, computerSelection);
+    }
+}
