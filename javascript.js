@@ -1,5 +1,3 @@
-//create a function called getComputerChoice
-//function will randomly return either rock paper or scissors
 
 
 function getComputerChoice () {
@@ -9,8 +7,6 @@ function getComputerChoice () {
     
 }
 
-let playerSelection = prompt('Lets play rock, paper scissors! Enter your choice below:')
-let computerSelection = getComputerChoice();
 
 function playRound (playerSelection, computerSelection) {
 
@@ -49,12 +45,26 @@ function playRound (playerSelection, computerSelection) {
 
 }
 
+
+function game () {
+
+    //let results = [];
+
+    for (let i=0; i < 5; i++) {
+        let computerSelection = getComputerChoice();
+        let playerSelection = prompt('Let\'s play rock, paper, scissors! There will be 5 rounds total. Enter your choice below! ');
+        let roundResult = playRound(playerSelection, computerSelection);
+        //results.push(roundResult);
+        alert(`The computer chose: ${computerSelection}.
+
+            ${roundResult}`);
+    }
+
+    //return results
+}
+let results = game();
+
 console.log(playerSelection);
 console.log(computerSelection);
 console.log(playRound(playerSelection, computerSelection));
-
-function game () {
-    for (let i=0; i < 5; i++) {
-        playRound(playerSelection, computerSelection);
-    }
-}
+console.log(results);
