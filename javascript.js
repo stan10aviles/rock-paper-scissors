@@ -1,6 +1,6 @@
 
 
-function getComputerChoice () {
+function getComputerChoice() {
     let computerOptions = ['rock', 'paper', 'scissors'];
     let computerSelection = computerOptions[Math.floor(Math.random()*computerOptions.length)];
     return computerSelection;
@@ -46,7 +46,7 @@ function playRound (playerSelection, computerSelection) {
 }
 
 
-function game () {
+function game() {
 
     
     let results = [];
@@ -85,6 +85,24 @@ function game () {
     else if (results[i] === 'You Lose! Paper beats Rock.' || results[i] === 'You Lose! Scissors beats Paper.' || results[i] === 'You Lose! Rock beats scissors.') {
         computerScore = computerScore + 1
     }
+    else {
+        ;
+    }
+
+    function finalResult() {
+        if (playerScore > computerScore) {
+            alert("You won the game! Luck is on your side!")
+        }
+        else if (computerScore > playerScore) {
+            alert("You lost the game! Better luck next time!")
+        }
+        else {
+            ;
+        }
+    
+    }
+
+    finalResult();
 
     //console.log(score);
    //console.log(score["It's a tie!"])
@@ -93,14 +111,4 @@ function game () {
     console.log(computerScore);
 }
 
-
-
-
-
 let results = game();
-
-console.log(playerSelection);
-console.log(computerSelection);
-console.log(playRound(playerSelection, computerSelection));
-console.log(results);
-console.log(roundResult);
