@@ -53,6 +53,9 @@ function game() {
             let computerSelection = getComputerChoice();
             let playerSelection = prompt('Let\'s play rock, paper, scissors! There will be 5 rounds total. Enter your choice below! ');
             let roundResult = playRound(playerSelection, computerSelection);
+            if (roundResult === "Invalid input.") {
+                i--;
+            }
             
             results.push(roundResult);
             alert(`The computer chose: ${computerSelection}.
@@ -91,9 +94,6 @@ function game() {
     finalResult();
 
 
-    console.log(results);
-    console.log(playerScore);
-    console.log(computerScore);
 }
 
 let results = game();
