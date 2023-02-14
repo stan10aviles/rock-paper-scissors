@@ -1,12 +1,10 @@
 
-
 function getComputerChoice() {
     let computerOptions = ['rock', 'paper', 'scissors'];
     let computerSelection = computerOptions[Math.floor(Math.random()*computerOptions.length)];
     return computerSelection;
     
 }
-
 
 function playRound (playerSelection, computerSelection) {
 
@@ -55,26 +53,14 @@ function game() {
             let computerSelection = getComputerChoice();
             let playerSelection = prompt('Let\'s play rock, paper, scissors! There will be 5 rounds total. Enter your choice below! ');
             let roundResult = playRound(playerSelection, computerSelection);
+            
             results.push(roundResult);
             alert(`The computer chose: ${computerSelection}.
 
                 ${roundResult}`);
         }
 
-    //return results
-/*
-    let score = {}; 
-    for (let i = 0; i < results.length; i++) {
-        let num = results[i];
 
-        if (score[num]) {
-            score[num] = score[num] + 1
-        }
-        else {
-            score[num] = 1
-        }
-    }
-*/
     let playerScore = 0;
     let computerScore = 0;
     for (let i=0; i < results.length; i++)
@@ -104,8 +90,7 @@ function game() {
 
     finalResult();
 
-    //console.log(score);
-   //console.log(score["It's a tie!"])
+
     console.log(results);
     console.log(playerScore);
     console.log(computerScore);
